@@ -30,20 +30,22 @@ export class UserEditComponent implements OnInit {
   onCreateUser() {
     this.dataService.createUser(this.userForm.value);
     this.storageService.storeUsers();
-    this.userForm.reset();
-    this.router.navigate(['']);
+    this.onClose();
   }
 
   onUpdate() {
     this.dataService.updateUser(this.userForm.value, this.id);
     this.storageService.storeUsers();
-    this.userForm.reset();
-    this.router.navigate(['']);
+    this.onClose();
   }
 
   onDelete() {
     this.dataService.deleteUser(this.id);
     this.storageService.storeUsers();
+    this.onClose();
+  }
+
+  onClose() {
     this.userForm.reset();
     this.router.navigate(['']);
   }

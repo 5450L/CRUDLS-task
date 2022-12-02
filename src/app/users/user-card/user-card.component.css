@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+
+  margin: auto;
+  margin-top: 2%;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: rgba(252, 252, 252, 0.875);
+  color: rgb(51, 51, 51);
+}
+.card:hover {
+  border: 2px solid black;
+}
+
+h2 {
+  margin: auto;
+  width: 30%;
+  display: block;
+  padding: 0 0.5rem;
+  text-align: center;
+  border-right: 1px solid rgb(111, 110, 110);
+}
+
+.age {
+  border-right: none;
+}

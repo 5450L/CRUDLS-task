@@ -1,3 +1,5 @@
-<p routerLink="{{ index }}">
-  {{ user?.firstName }} {{ user?.lastName }} {{ user?.age }}
-</p>
+<div class="card" routerLink="{{ index }}">
+  <h2>{{ user?.firstName }}</h2>
+  <h2>{{ user?.lastName }}</h2>
+  <h2 class="age">{{ user?.age }}</h2>
+</div>

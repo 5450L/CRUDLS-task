@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './users/users-list/users-list.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserCardComponent } from './users/user-card/user-card.component';
-import { UserStartComponent } from './users/user-start/user-start.component';
 import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -17,14 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsersListComponent,
     UserEditComponent,
     UserCardComponent,
-    UserStartComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

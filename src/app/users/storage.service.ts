@@ -10,6 +10,7 @@ export class StorageService {
 
   fetchUsers() {
     this.dataService.users = JSON.parse(localStorage.getItem('Users') || '{}');
+    console.log(localStorage);
   }
 
   storeUsers() {

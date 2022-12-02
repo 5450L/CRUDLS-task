@@ -1,11 +1,21 @@
-<p>user-edit works!</p>
+<div class="backdrop" (click)="onClose()"></div>
+
 <form [formGroup]="userForm" (ngSubmit)="onCreateUser()">
   <div class="form-buttons">
-    <button type="submit" *ngIf="!editMode; else edit">Create</button>
+    <button
+      type="submit"
+      *ngIf="!editMode; else edit"
+      id="create"
+      [disabled]="!userForm.valid"
+    >
+      Create
+    </button>
 
     <ng-template #edit>
-      <button (click)="onUpdate()">Update</button>
-      <button (click)="onDelete()">Delete</button>
+      <button (click)="onUpdate()" id="update" [disabled]="!userForm.valid">
+        Update
+      </button>
+      <button (click)="onDelete()" id="delete">Delete</button>
     </ng-template>
   </div>
 
