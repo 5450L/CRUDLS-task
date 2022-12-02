@@ -1,0 +1,26 @@
+<p>user-edit works!</p>
+<form [formGroup]="userForm" (ngSubmit)="onCreateUser()">
+  <div class="form-buttons">
+    <button type="submit" *ngIf="!editMode; else edit">Create</button>
+
+    <ng-template #edit>
+      <button (click)="onUpdate()">Update</button>
+      <button (click)="onDelete()">Delete</button>
+    </ng-template>
+  </div>
+
+  <div class="input-field">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" formControlName="firstName" />
+  </div>
+
+  <div class="input-field">
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" formControlName="lastName" />
+  </div>
+
+  <div class="input-field">
+    <label for="age">Age</label>
+    <input type="number" id="age" formControlName="age" />
+  </div>
+</form>
